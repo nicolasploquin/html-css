@@ -1,0 +1,335 @@
+/* ----- Règles de base -------- */
+html {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    font-size: 1em;
+}
+
+h1, h2 {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    letter-spacing: 0.15em;
+}
+
+p{
+    line-height: 1.25em;
+    text-align: justify;
+}
+
+a {
+    color: inherit;
+}
+nav a {
+    text-decoration: none;
+}
+
+img, video, audio, figure, canvas, svg {
+    max-width: 100%;
+}
+
+input, textarea, select, option, button {
+    font-family: inherit;
+    font-size: 1em;
+}
+textarea {
+    resize: vertical;
+}
+
+.scroll-h {
+    max-width: 100%;
+    overflow: auto;
+}
+
+
+/* ----- Entête -------- */
+header h1 {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height:1em;
+    font-weight: 900;
+    background-color: #fc0;
+    color: #000;
+    padding: .5em 1em;
+    border-radius: 0;
+    
+}
+header h2 {
+    margin: 0;
+    line-height:1em;
+    text-align: center;
+    padding: .5em 0 .25em;
+    border-bottom: .25em solid #fc0;
+}
+
+/* ----- Menu -------- */
+header nav {
+    background-color: #fc0;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    font-size: .9em;
+    padding: 1em 1em 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+}
+header nav a {
+    display: inline-block;
+    padding: .5em 1em;
+    
+    white-space: nowrap;
+    flex: 0 1 10em; /* grow shrink basis */
+    text-align: center;
+}
+header nav a:first-child {
+    flex-shrink: 100;
+}
+
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff;
+}
+header nav a.active {
+    background-color: #fff;
+    box-shadow: 0 -2px 3px #0003;
+}
+header nav a.active:hover {
+    color: #000;
+    cursor: unset;
+}
+
+
+
+
+/* ----- Section -------- */
+section {
+    margin-bottom: 2em;
+}
+section h2 {
+    padding: .5em 1em;
+    width: .4em;
+    white-space: nowrap;
+    background-color: #fc0;
+    border-radius: 50%;
+}
+
+/* ----- Etat civil -------- */
+.etat-civil small {
+    opacity: .5;
+    font-size: 1em;
+}
+.etat-civil li {
+    list-style-type: none;
+    
+}
+
+/* ----- Photos -------- */
+.photos img {
+    object-fit: cover;
+    object-position: top;
+}
+.photos.grid img {
+    width: 100%;
+    max-height: 300px;
+}
+.photos.grid {    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    align-items: stretch;
+}
+.photos.flex {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.photos.flex img {
+    flex: 1 1 200px;
+}    
+
+
+/* ----- Page Biographie -------- */
+main.page-biographie {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content 1fr;
+}
+main.page-biographie figure {
+    /* grid-column: 2 / 3; */
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1 / 2 ;
+    text-align: center;
+}
+main.page-biographie #etat-civil {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+}
+main.page-biographie #biographie {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3 ;
+}
+main.page-biographie figure img {
+    height: 100%;
+    min-width: 200px;
+}
+main.page-biographie figure figcaption {
+    display: none;
+}
+
+
+/* ----- Tableau Filmographie -------- */
+.table-filmographie {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-filmographie td, 
+.table-filmographie th {
+    padding: .5em 1em;
+}
+.table-filmographie thead {
+    background-color: #eee;
+    font-variant: small-caps;
+}
+.table-filmographie tbody {
+    border-bottom: 3px solid #eee;
+}
+.table-filmographie tbody tr {
+    border-bottom: 1px solid #eee;
+}
+.table-filmographie tbody td:first-child {
+    text-align: center;
+}
+.table-filmographie tbody td:nth-child(2) {
+    font-weight: bold;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: none;
+    min-width: none;
+    position: relative; */
+}
+.table-filmographie tbody td:last-child {
+    text-align: center;
+}
+.table-filmographie tbody td:last-child {
+    text-align: center;
+    color: #fc0;
+    display: flex;
+    align-items: center;
+}
+.table-filmographie tbody td:last-child .material-icons {
+    font-size: 20px;
+}
+.table-filmographie tbody td:last-child .note {
+    font-size: 10px;
+    font-weight: bold;
+    width: 16px;
+    line-height: 16px;
+    padding: 4px;
+    margin: .5em;
+    background-color: #fc0;
+    color: #000;
+    border-radius: 50%;
+}
+
+/* ----- Formulaire publier un commentaire -------- */
+
+form.grid {
+    max-width: 24em;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 1em;
+    row-gap: 0.5em;
+}
+form.grid .controls {
+    grid-column: 2;
+    justify-self: start;
+}
+
+.form-commentaire input,
+.form-commentaire select,
+.form-commentaire textarea {
+    padding: .5em 1em;
+}
+
+.form-commentaire button {
+    background-image: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    padding: .5em 1em;
+    background-color: #ccc;
+    border-radius: 2px;
+}
+.form-commentaire [type='submit'] {
+    background-color: #fc0;
+}
+
+.form-commentaire span {
+    margin-right: .5em;
+}
+
+.form-commentaire .range-note {
+    display: flex;
+    align-items: center;
+}
+.form-commentaire .range-note input {
+    padding: 0;
+    margin-right: .5em;
+    flex: 1 1 auto;
+}
+
+.form-commentaire .range-note .note {
+    font-weight: bold;
+    width: 1em;
+    line-height: 1em;
+    padding: 8px;
+    margin: 0 .5em;
+    background-color: #fc0;
+    color: #000;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+/* ----- Vues adaptatives -------- */
+
+@media (max-width: 660px) {
+    
+    header nav a:first-child {
+        display: none;
+    }
+    
+    main.page-biographie {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+}
+@media (max-width: 500px) {
+
+    body {
+        margin: 0;
+    }
+
+    header nav {
+        font-size: .75em;
+    }
+
+    header nav a {
+        padding: .5em .25em;
+        letter-spacing: 0;
+    }
+    
+
+}

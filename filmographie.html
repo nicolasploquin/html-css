@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation HTML-CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer ></script>
+</head>
+<body>
+    <header>
+        <h1>Pierre Niney</h1>
+        <h2>Filmographie</h2>
+        <nav>
+            <a href="index.html#etat-civil">Pierre Niney</a>
+            <a href="index.html#biographie">Biographie</a>
+            <a href="filmographie.html" class="active">Filmographie</a>
+            <a href="photos.html">Photos</a>
+            <a href="videos.html">Vidéo</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Acteur</h2>
+        <div class="scroll-h">
+            <table class="table-filmographie">
+                <thead>
+                    <tr><th>Année</th><th>Titre</th><th>Rôle</th><th>Note<br/>spectateurs</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020</td>
+                        <td>Boîte noire</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr><td>2019</td><td>Lisa Redler</td><td>Simon</td><td></td></tr>
+                <tr><td>2019</td><td>OSS 117 : Alerte rouge en Afrique noire</td><td></td><td></td></tr>
+                <tr>
+                    <td>2018</td><td>Deux Moi</td><td>Mathieu Bernard</td>
+                    <td>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                        <span class="note">3,7</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2018</td><td>Sauver ou périr</td><td>Franck Pasquier</td>
+                    <td>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <span class="note">4,4</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td>La Promesse de l'aube</td>
+                    <td>Romain</td>
+                    <td>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                        <span class="note">4,2</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+    <section>
+        <h2>Publier un commentaire</h2>
+        <form class="form-commentaire grid" method="POST" action="#">
+            <label for="fc-pseudo" >Pseudo</label>
+            <input id="fc-pseudo" name="pseudo" type="text" />
+
+            <label for="fc-film" >Film</label>
+            <select id="fc-film" name="film">
+                <option value="000001" ><small>2020</small> Boîte noire</option>
+                <option value="000002" ><small>2019</small> Lisa Redler</option>
+                <option value="000003" ><small>2019</small> OSS 117 : Alerte rouge en Afrique noire</option>
+                <option value="000004" ><small>2018</small> Deux Moi</option>
+                <option value="000005" ><small>2018</small> Sauver ou périr</option>
+                <option value="000006" ><small>2017</small> La Promesse de l'aube</option>
+            </select>
+
+            <label for="fc-note" >Note</label>
+            <div class="range-note">
+                <input id="fc-note" name="note" type="range" min="1" max="5" value="3" />
+                <span class="note">3</span>
+            </div>
+
+            <label for="fc-commentaire" >Commentaire</label>
+            <textarea id="fc-commentaire" name="commentaire" rows="5"></textarea>
+
+            <div class="controls">
+                <button type="submit"><span>Publier</span><i class="material-icons">send</i></button>
+                <button type="reset"><span>Effacer</span><i class="material-icons">clear</i></button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
