@@ -5,6 +5,9 @@ html {
     background-color: #fff;
     font-size: 1em;
 }
+body {
+    margin: 0;
+}
 
 h1, h2 {
     text-transform: capitalize;
