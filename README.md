@@ -11,4 +11,4 @@ Projet de formation HTML5-CSS3
 - Formulaires HTML et mise en forme
 - Présentation adaptative
 
-Déploiement Azure : [eni-html.azurewebsites.net](eni-html.azurewebsites.net)
+Déploiement Azure : [https://eni-html.azurewebsites.net](https://eni-html.azurewebsites.net)
