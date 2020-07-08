@@ -15,5 +15,13 @@
     - Ouvrir une console PowerShell
     - Exécuter `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine`
 
+3. Installer le serveur JavaScript **live-server**
+    - Exécuter dans la console PowerShell `npm install --global live-server`
 
+## Création du projet
 
+- Créer un dossier
+- Ouvrir ce dossier dans Visual Studio Code
+- Créer un nouveau fichier **index.html**
+- Ouvrir un terminal **Terminal -> Nouveau terminal**
+- Démarrer le serveur `live-server --port=80`
